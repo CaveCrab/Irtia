@@ -1,3 +1,5 @@
+## Unity
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -6,3 +8,18 @@
 *.csproj
 *.unityproj
 *.sln
+
+## Platform-specific junk
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# MacOSX
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
