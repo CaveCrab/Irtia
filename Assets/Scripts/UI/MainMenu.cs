@@ -1,17 +1,17 @@
 using UnityEngine;
 using System.Collections;
 
-//Player controller
+//Main menu: rendering and shifting between scenes (levels)
 
-public class Controller : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
-	public int health;
 	
 	void Start ()
 	{
 	
 	}
 	
+
 	void Update ()
 	{
 	

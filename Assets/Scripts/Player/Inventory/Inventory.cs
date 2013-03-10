@@ -1,12 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-//Player controller
+//Inventory
 
-public class Controller : MonoBehaviour
+public class Inventory : MonoBehaviour
 {
-	public int health;
-	
+
 	void Start ()
 	{
 	
