@@ -5,7 +5,8 @@ using System.Collections;
 
 public class Controller : MonoBehaviour
 {
-	public int health;
+	public float health;
+	public float healthregen;
 	
 	void Start ()
 	{
@@ -14,6 +15,9 @@ public class Controller : MonoBehaviour
 	
 	void Update ()
 	{
-	
+		if(health < 100)
+		{
+			health += healthregen*Time.fixedDeltaTime;
+		}
 	}
 }
