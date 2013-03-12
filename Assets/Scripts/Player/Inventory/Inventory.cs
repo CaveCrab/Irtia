@@ -5,14 +5,10 @@ using System.Collections;
 
 public class Inventory : MonoBehaviour
 {
+	public Item[] inventory;
 
-	void Start ()
+	public void Add(Item item)
 	{
-	
-	}
-	
-	void Update ()
-	{
-	
+		
 	}
 }

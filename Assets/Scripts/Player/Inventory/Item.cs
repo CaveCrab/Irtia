@@ -5,5 +5,6 @@ using System.Collections;
 
 public class Item
 {
-	
+	public Texture image;
+	public string name;
 }
