@@ -4,9 +4,7 @@ using System.Collections;
 //Player HUD
 
 public class HUD : MonoBehaviour
-{
-	//Inventory item image list
-	public Texture[] itemimages;
+{	
 	//Health bar textures
 	public Texture2D healthbar_empty;
 	public Texture2D healthbar_full;
@@ -56,16 +54,8 @@ public class HUD : MonoBehaviour
 		{
 			GUI.BeginGroup(new Rect(0,0,width,height));
 			GUI.Box(new Rect(0,0,width,height),"inventory");
-			selected = GUI.SelectionGrid(new Rect(0,0,width,height),selected,itemimages,10);
+			selected = GUI.SelectionGrid(new Rect(0,0,width,height),selected,player.GetComponent<Inventory>().itemimages,10);
 			GUI.EndGroup();	
-		}
-	}
-	//Update the inventory item image list
-	public void UpdateInventory()
-	{
-		foreach(Texture image in GetComponent<Inventory>().inventory)
-		{
-			
 		}
 	}
 }
