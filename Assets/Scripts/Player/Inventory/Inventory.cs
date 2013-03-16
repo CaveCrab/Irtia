@@ -5,19 +5,18 @@ using System.Collections;
 
 public class Inventory : MonoBehaviour
 {
-	public Item[] inventory;//Item list (=inventory)
-	public Texture[] itemimages;//item image list for inventory rendering
-	public int itemnumber,imagenumber,inventorysize;//item and image numbers for list placeholding and the base size for the inventory
-	public bool update;//a boolean for updating the inventory image list
+	public Item[] inventory;
+	public Texture[] images;
+	public bool update;
+	public int inventorysize,itemnumber; //inventory size and item numbers
+	
 	void Start()
 	{
 		update = false;
-		inventory = new Item[inventorysize];//set the inventory
-		itemimages = new Texture[inventorysize];//set the item image list
-		itemnumber = 0; //reset the place numbers
-		imagenumber = 0;
+		inventory = new Item[inventorysize];
+		images = new Texture[inventorysize];
 	}
-	public void Add(Item item) // a function for adding items, takes an item
+	public void Add(Item item) // a function for adding items, takes an item and adds it to the inventory item list
 	{
 		inventory[itemnumber] = item;
 		item.number = itemnumber;
@@ -26,24 +25,12 @@ public class Inventory : MonoBehaviour
 	}
 	public void UpdateImages() // updates the item image list based on the inventory item list
 	{
-		if(update == true)
+		foreach(Item item in inventory)
 		{
-			int i = 0;
-			while(i < inventorysize)
+			if(item != null)
 			{
-				if(inventory[i] == null)
-				{
-				 	itemimages[i] = null; 
-					i++;
-				}
-				else
-				{
-					itemimages[i] = inventory[i].image;
-					i++;
-				}
-				
+				images[item.number]  = item.image;	
 			}
-			update = false; 
 		}
 	}
 }
