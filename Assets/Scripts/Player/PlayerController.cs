@@ -3,14 +3,14 @@ using System.Collections;
 
 //Player controller
 
-public class Controller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 	public float health;
 	public float healthregen;
 	
 	void Start ()
 	{
-	
+		
 	}
 	
 	void Update ()

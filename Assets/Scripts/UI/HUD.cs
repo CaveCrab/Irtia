@@ -49,7 +49,7 @@ public class HUD : MonoBehaviour
 		GUI.BeginGroup(hud);
 		GUI.DrawTexture(new Rect(0,0,width,32), healthbar_empty);
 		GUI.BeginGroup(new Rect(0,0,width/2-height/32,height/6));
-		GUI.DrawTexture(new Rect(0,0,width*player.GetComponent<Controller>().health/100,32), healthbar_full);
+		GUI.DrawTexture(new Rect(0,0,width*player.GetComponent<PlayerController>().health/100,32), healthbar_full);
 		GUI.EndGroup();
 		GUI.EndGroup();
 		//Inventory
