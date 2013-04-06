@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 	public float healthregen;
 	
 	public float movementSpeed;
+	public float jumpForce;
 	
 	void Start ()
 	{
@@ -25,6 +26,11 @@ public class PlayerController : MonoBehaviour
 	
 	void FixedUpdate()
 	{
-		rigidbody.AddForce(new Vector3(1,0,0)*Input.GetAxis("Horizontal")*movementSpeed);	
+		rigidbody.AddForce(new Vector3(1,0,0)*Input.GetAxis("Horizontal")*movementSpeed);
+		
+		if(Input.GetKeyDown(KeyCode.Space))
+		{
+			rigidbody.AddForce(Vector3.up*jumpForce, ForceMode.Impulse);
+		}
 	}
 }
